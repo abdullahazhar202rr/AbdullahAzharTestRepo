@@ -1,1 +1,2 @@
-Abdullah Azhar's file2
+ This is my second file 
+My name is Abdullah Azhar
