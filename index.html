@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <script type="text/javascript" src="/___vscode_livepreview_injected_script"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Abdullah Azhar's Portfolio</title>
@@ -15,6 +15,7 @@
         :root {
             --bgcolor: #0D1B2A;
             --color: #64ffda;
+            --pcolor: #8992b2;
         }
 
         body {
@@ -26,7 +27,8 @@
         }
 
         .navbar {
-            border: 2px solid var(--color);
+            box-sizing: border-box;
+            /* border-bottom: 2px solid var(--color); */
             width: 100vw;
             padding: 10px;
             display: flex;
@@ -35,15 +37,13 @@
             flex-wrap: wrap;
         }
 
-        nav ul {
-            list-style-type: none;
+        nav ol {
+            list-style-type: decimal-leading-zero;
             display: flex;
             justify-content: right;
             align-items: center;
             text-align: center;
             gap: 50px;
-
-            list-style-type: decimal;
             font-weight: bold;
         }
 
@@ -58,9 +58,7 @@
 
         li::marker {
             color: var(--color);
-            font-size: 13px;
             text-shadow: 1px 1px 3px var(--color);
-
 
         }
 
@@ -72,15 +70,13 @@
             background-color: var(--bgcolor);
             color: var(--color);
             text-shadow: 1px 1px 3px var(--color);
+            cursor: pointer;
 
         }
 
         .pic {
             color: var(--color);
             border: 2px solid var(--color);
-            /* display: flex; */
-            /* justify-content: left; */
-            /* align-items: flex-start; */
             width: 60px;
             height: 60px;
             border-radius: 50%;
@@ -92,7 +88,6 @@
 
         .herocard {
             color: white;
-            border: 2px solid var(--color);
             height: auto;
             max-width: 80vw;
             margin: auto;
@@ -105,7 +100,7 @@
             font-size: 18px;
             margin-bottom: 20px;
             color: var(--color);
-            /* text-shadow: 1px 1px 3px var(--color); */
+            text-shadow: 1px 1px 3px var(--color);
             letter-spacing: 1px;
             font-family: monospace;
         }
@@ -118,16 +113,67 @@
         }
         .explain {
             line-height: 25px;
-            font-size: 18px;
-            color: #8992b2;
-            margin-top: 20px;
+            font-size: 20px;
+            color: var(--pcolor);
+            margin: 20px 0px;
             overflow: auto;
             max-width: 750px;
-
         }
         b{
             color: var(--color);
         }
+        .prv{
+            margin-top: 60px;
+            
+        }
+        .prv > a{
+            text-decoration: none;
+            color: var(--color);
+            border: 3px solid var(--color);
+            border-radius: 7px;
+            padding: 15px;
+        }
+        .email{
+            font-size: 15px;
+            letter-spacing: 3px;
+            text-decoration: none;
+            color: var(--pcolor);
+            writing-mode: vertical-rl;
+        }
+        .email:hover{
+            color: var(--color);
+            text-shadow: 2px 1px 3px var(--color);
+        }
+        .right{
+            position: fixed;
+            bottom: 30px;
+            right: 50px;
+            font-size: 25px;
+            display: flex;
+            gap: 30px;
+            color: var(--pcolor);
+            writing-mode: vertical-rl;
+            align-items: center;
+        }
+        .left{
+            position: fixed;
+            bottom: 30px;
+            left: 50px;
+            font-size: 25px;
+            display: flex;
+            gap: 45px;
+            text-decoration: none;
+            color: var(--pcolor);
+            writing-mode: vertical-lr;
+        }
+        .left>a{
+            color: #ccd6f6;
+        }
+        .left >a:hover{
+            color: var(--color);
+            text-shadow: 2px 1px 3px var(--color);
+        }
+
         @media only screen and (max-width: 600px){
             .herocard {
                 width: 95%;
@@ -148,24 +194,23 @@
                 <img src="image.jpg" alt="myimg" class="pic">
             </div>
             <nav>
-                <ul>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Experience</a></li>
-                    <li><a href="#">Study</a></li>
-                    <button class="btn">Resume</button>
-                </ul>
+                <ol>
+                    <li><a href="previous portfolio.html">About</a></li>
+                    <li><a href="previous portfolio.html">Experience</a></li>
+                    <li><a href="previous portfolio.html">Study</a></li>
+                    <button class="btn" onclick="window.location.href='myresume.pdf'">Resume</button>
+                </ol>
             </nav>
         </div>
     </header>
     <main>
         <section>
-
             <div class="herocard">
                 <p class="intro">Hi, my name is</p>
                 <h2>
                     Abdullah Azhar.
                 </h2>
-                <h2 style="color: #8892b0;">I am Software Engineer turning your Paperball into Paperplane.</h2>
+                <h2 style="color: var(--pcolor);">I am Software Engineer turning your Paperball into Paperplane.</h2>
                 <div class="explain">
 
                     <p >I'm Software Engineer, a passionate AI student at The University of Faisalabad with expertise in
@@ -174,10 +219,37 @@
                         weather app, contact management system, and AI-powered tools. With a strong foundation in software
                         engineering and data structures, I'm dedicated to exploring AI innovations and building intelligent
                         solutions.
-                    </div>
-                </p>
+                    </p>
+                </div>
+                <div class="prv">
+                    <a href="previous portfolio.html">Checkout My details!</a>                    
+                </div>
             </div>
         </section>
+        <aside>
+            <div class="right">
+                    <a href="mailto:abdullahazhar202rr@gmail.com" class="email" target="_blank">abdullahazhar202rr@gmail.com</a>
+                    <pre style="font-size: 6px">-------------------------------</pre>
+                </div>
+            </aside>
+            <aside>
+                <div class="left">
+                    
+                    <a href="https://www.linkedin.com/in/abdullah-azhar-83b8ba296/" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/abdullahazhar202rr/" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://project.codebyabdullahazhar.freewebhostmost.com/" target="_blank" rel="noopener noreferrer" aria-label="Website">
+                        <i class="fas fa-globe"></i>
+                    </a>
+                    <a href="https://www.instagram.com/abdullahazhar202rr" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <pre style="font-size: 6px; margin-left: 12px;">-------------------------------</pre>
+                </div>
+            </aside>
     </main>
 </body>
 
