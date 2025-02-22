@@ -67,20 +67,22 @@ nav{
     border-radius: 5px 30px 30px 30px;
     
 }
-.products{
-    /* border: 2px solid black; */
+.products {
     display: flex;
     align-items: center;
+    gap: 30px;
     width: 55vw;
     height: 70vh;
-    overflow-x: auto;
-    
+    overflow-x: hidden;
+    position: relative;
 }
-.products::-webkit-scrollbar{
-    display: none;
-}
+
 .products:hover .scroll-wrapper {
-    animation: scroll 5s linear infinite alternate;
+    animation: scroll 10s linear infinite alternate;
+}
+
+.scroll-wrapper {
+    display: flex;
 }
 
 @keyframes scroll {
@@ -88,7 +90,7 @@ nav{
         transform: translateX(0);
     }
     100% {
-        transform: translateX(-100%); /* Adjust as per content width */
+        transform: translateX(-50%);
     }
 }
 
