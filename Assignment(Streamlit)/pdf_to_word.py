@@ -3,7 +3,7 @@ from PyPDF2 import PdfReader
 from docx import Document
 import io
 sl.sidebar.image("https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/PDF_file_icon.svg/2048px-PDF_file_icon.svg.png", width=40)
-sl.sidebar.image("mypic.jpg", caption="👤 **Abdullah Azhar**", width=130)
+sl.sidebar.image("https://github.com/abdullahazhar202rr/websnack/blob/master/Assignment(Streamlit)/mypic.jpg", caption="👤 **Abdullah Azhar**", width=130)
 
 
 sl.sidebar.markdown("### 🔧 PDF to DOCX Converter\n💡 My first Streamlit app!")
